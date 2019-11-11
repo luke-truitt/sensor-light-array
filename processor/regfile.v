@@ -1,0 +1,156 @@
+module regfile (
+    clock,
+    ctrl_writeEnable,
+    ctrl_reset, ctrl_writeReg,
+    ctrl_readRegA, ctrl_readRegB, data_writeReg,
+    data_readRegA, data_readRegB
+);
+
+   input clock, ctrl_writeEnable, ctrl_reset;
+   input [4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
+   input [31:0] data_writeReg;
+   wire [31:0] out0, out1, out2, out3, out4, out5, out6, out7, out8, out9, out10, out11, out12, out13, out14, out15, out16, out17, out18, out19, out20, out21, out22, out23, out24, out25, out26, out27, out28, out29, out30, out31;
+   output [31:0] data_readRegA, data_readRegB;
+	
+	wire enable0, enable1, enable2, enable3, enable4, enable5, enable6, enable7, enable8, enable9, enable10, enable11, enable12, enable13, enable14, enable15, enable16, enable17, enable18, enable19, enable20, enable21, enable22, enable23, enable24, enable25, enable26, enable27, enable28, enable29, enable30, enable31;
+	wire [31:0] write_enabled;
+	wire [31:0] read_1;
+	wire [31:0] read_2;
+	wire tri_outA, tri_outB;
+	
+	and enable_0(enable0, clock, write_enabled[0], ctrl_writeEnable);
+	and enable_1(enable1, clock, write_enabled[1], ctrl_writeEnable);
+	and enable_2(enable2, clock, write_enabled[2], ctrl_writeEnable);
+	and enable_3(enable3, clock, write_enabled[3], ctrl_writeEnable);
+	and enable_4(enable4, clock, write_enabled[4], ctrl_writeEnable);
+	and enable_5(enable5, clock, write_enabled[5], ctrl_writeEnable);
+	and enable_6(enable6, clock, write_enabled[6], ctrl_writeEnable);
+	and enable_7(enable7, clock, write_enabled[7], ctrl_writeEnable);
+	and enable_8(enable8, clock, write_enabled[8], ctrl_writeEnable);
+	and enable_9(enable9, clock, write_enabled[9], ctrl_writeEnable);
+	and enable_10(enable10, clock, write_enabled[10], ctrl_writeEnable);
+	and enable_11(enable11, clock, write_enabled[11], ctrl_writeEnable);
+	and enable_12(enable12, clock, write_enabled[12], ctrl_writeEnable);
+	and enable_13(enable13, clock, write_enabled[13], ctrl_writeEnable);
+	and enable_14(enable14, clock, write_enabled[14], ctrl_writeEnable);
+	and enable_15(enable15, clock, write_enabled[15], ctrl_writeEnable);
+	and enable_16(enable16, clock, write_enabled[16], ctrl_writeEnable);
+	and enable_17(enable17, clock, write_enabled[17], ctrl_writeEnable);
+	and enable_18(enable18, clock, write_enabled[18], ctrl_writeEnable);
+	and enable_19(enable19, clock, write_enabled[19], ctrl_writeEnable);
+	and enable_20(enable20, clock, write_enabled[20], ctrl_writeEnable);
+	and enable_21(enable21, clock, write_enabled[21], ctrl_writeEnable);
+	and enable_22(enable22, clock, write_enabled[22], ctrl_writeEnable);
+	and enable_23(enable23, clock, write_enabled[23], ctrl_writeEnable);
+	and enable_24(enable24, clock, write_enabled[24], ctrl_writeEnable);
+	and enable_25(enable25, clock, write_enabled[25], ctrl_writeEnable);
+	and enable_26(enable26, clock, write_enabled[26], ctrl_writeEnable);
+	and enable_27(enable27, clock, write_enabled[27], ctrl_writeEnable);
+	and enable_28(enable28, clock, write_enabled[28], ctrl_writeEnable);
+	and enable_29(enable29, clock, write_enabled[29], ctrl_writeEnable);
+	and enable_30(enable30, clock, write_enabled[30], ctrl_writeEnable);
+	and enable_31(enable31, clock, write_enabled[31], ctrl_writeEnable);
+	
+	tristate tria_0(data_readRegA, read_1[0], out0);
+	tristate tria_1(data_readRegA, read_1[1], out1);
+	tristate tria_2(data_readRegA, read_1[2], out2);
+	tristate tria_3(data_readRegA, read_1[3], out3);
+	tristate tria_4(data_readRegA, read_1[4], out4);
+	tristate tria_5(data_readRegA, read_1[5], out5);
+	tristate tria_6(data_readRegA, read_1[6], out6);
+	tristate tria_7(data_readRegA, read_1[7], out7);
+	tristate tria_8(data_readRegA, read_1[8], out8);
+	tristate tria_9(data_readRegA, read_1[9], out9);
+	tristate tria_10(data_readRegA, read_1[10], out10);
+	tristate tria_11(data_readRegA, read_1[11], out11);
+	tristate tria_12(data_readRegA, read_1[12], out12);
+	tristate tria_13(data_readRegA, read_1[13], out13);
+	tristate tria_14(data_readRegA, read_1[14], out14);
+	tristate tria_15(data_readRegA, read_1[15], out15);
+	tristate tria_16(data_readRegA, read_1[16], out16);
+	tristate tria_17(data_readRegA, read_1[17], out17);
+	tristate tria_18(data_readRegA, read_1[18], out18);
+	tristate tria_19(data_readRegA, read_1[19], out19);
+	tristate tria_20(data_readRegA, read_1[20], out20);
+	tristate tria_21(data_readRegA, read_1[21], out21);
+	tristate tria_22(data_readRegA, read_1[22], out22);
+	tristate tria_23(data_readRegA, read_1[23], out23);
+	tristate tria_24(data_readRegA, read_1[24], out24);
+	tristate tria_25(data_readRegA, read_1[25], out25);
+	tristate tria_26(data_readRegA, read_1[26], out26);
+	tristate tria_27(data_readRegA, read_1[27], out27);
+	tristate tria_28(data_readRegA, read_1[28], out28);
+	tristate tria_29(data_readRegA, read_1[29], out29);
+	tristate tria_30(data_readRegA, read_1[30], out30);
+	tristate tria_31(data_readRegA, read_1[31], out31);
+	tristate trib_0(data_readRegB, read_2[0], out0);
+	tristate trib_1(data_readRegB, read_2[1], out1);
+	tristate trib_2(data_readRegB, read_2[2], out2);
+	tristate trib_3(data_readRegB, read_2[3], out3);
+	tristate trib_4(data_readRegB, read_2[4], out4);
+	tristate trib_5(data_readRegB, read_2[5], out5);
+	tristate trib_6(data_readRegB, read_2[6], out6);
+	tristate trib_7(data_readRegB, read_2[7], out7);
+	tristate trib_8(data_readRegB, read_2[8], out8);
+	tristate trib_9(data_readRegB, read_2[9], out9);
+	tristate trib_10(data_readRegB, read_2[10], out10);
+	tristate trib_11(data_readRegB, read_2[11], out11);
+	tristate trib_12(data_readRegB, read_2[12], out12);
+	tristate trib_13(data_readRegB, read_2[13], out13);
+	tristate trib_14(data_readRegB, read_2[14], out14);
+	tristate trib_15(data_readRegB, read_2[15], out15);
+	tristate trib_16(data_readRegB, read_2[16], out16);
+	tristate trib_17(data_readRegB, read_2[17], out17);
+	tristate trib_18(data_readRegB, read_2[18], out18);
+	tristate trib_19(data_readRegB, read_2[19], out19);
+	tristate trib_20(data_readRegB, read_2[20], out20);
+	tristate trib_21(data_readRegB, read_2[21], out21);
+	tristate trib_22(data_readRegB, read_2[22], out22);
+	tristate trib_23(data_readRegB, read_2[23], out23);
+	tristate trib_24(data_readRegB, read_2[24], out24);
+	tristate trib_25(data_readRegB, read_2[25], out25);
+	tristate trib_26(data_readRegB, read_2[26], out26);
+	tristate trib_27(data_readRegB, read_2[27], out27);
+	tristate trib_28(data_readRegB, read_2[28], out28);
+	tristate trib_29(data_readRegB, read_2[29], out29);
+	tristate trib_30(data_readRegB, read_2[30], out30);
+	tristate trib_31(data_readRegB, read_2[31], out31);
+
+   register r_0(out0, 32'b0, enable0, ctrl_reset);
+	register r_1(out1, data_writeReg, enable1, ctrl_reset);
+	register r_2(out2, data_writeReg, enable2, ctrl_reset);
+	register r_3(out3, data_writeReg, enable3, ctrl_reset);
+	register r_4(out4, data_writeReg, enable4, ctrl_reset);
+	register r_5(out5, data_writeReg, enable5, ctrl_reset);
+	register r_6(out6, data_writeReg, enable6, ctrl_reset);
+	register r_7(out7, data_writeReg, enable7, ctrl_reset);
+	register r_8(out8, data_writeReg, enable8, ctrl_reset);
+	register r_9(out9, data_writeReg, enable9, ctrl_reset);
+	register r_10(out10, data_writeReg, enable10, ctrl_reset);
+	register r_11(out11, data_writeReg, enable11, ctrl_reset);
+	register r_12(out12, data_writeReg, enable12, ctrl_reset);
+	register r_13(out13, data_writeReg, enable13, ctrl_reset);
+	register r_14(out14, data_writeReg, enable14, ctrl_reset);
+	register r_15(out15, data_writeReg, enable15, ctrl_reset);
+	register r_16(out16, data_writeReg, enable16, ctrl_reset);
+	register r_17(out17, data_writeReg, enable17, ctrl_reset);
+	register r_18(out18, data_writeReg, enable18, ctrl_reset);
+	register r_19(out19, data_writeReg, enable19, ctrl_reset);
+	register r_20(out20, data_writeReg, enable20, ctrl_reset);
+	register r_21(out21, data_writeReg, enable21, ctrl_reset);
+	register r_22(out22, data_writeReg, enable22, ctrl_reset);
+	register r_23(out23, data_writeReg, enable23, ctrl_reset);
+	register r_24(out24, data_writeReg, enable24, ctrl_reset);
+	register r_25(out25, data_writeReg, enable25, ctrl_reset);
+	register r_26(out26, data_writeReg, enable26, ctrl_reset);
+	register r_27(out27, data_writeReg, enable27, ctrl_reset);
+	register r_28(out28, data_writeReg, enable28, ctrl_reset);
+	register r_29(out29, data_writeReg, enable29, ctrl_reset);
+	register r_30(out30, data_writeReg, enable30, ctrl_reset);
+	register r_31(out31, data_writeReg, enable31, ctrl_reset);
+
+	decode532 decode1(write_enabled, ctrl_writeReg);
+	decode532 decode2(read_1, ctrl_readRegA);
+	decode532 decode3(read_2, ctrl_readRegB);
+	
+endmodule
