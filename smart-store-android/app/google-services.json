@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "235952585614",
+    "firebase_url": "https://smart-store-android.firebaseio.com",
+    "project_id": "smart-store-android",
+    "storage_bucket": "smart-store-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235952585614:android:8a4afe3ccdfc8cb402c2df",
+        "android_client_info": {
+          "package_name": "com.bluetooth.ece350_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "235952585614-4qeq0eluo4b0jr9pq6jcqu276e389lk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1VZjM0HrqDvpXvrItGNDYaBOYve1bA30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "235952585614-4qeq0eluo4b0jr9pq6jcqu276e389lk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
