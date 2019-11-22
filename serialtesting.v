@@ -1,0 +1,47 @@
+module serialtesting(clock, reset, tx, send);
+
+input clock, reset, send;
+output reg tx;
+reg [31:0] counter;
+reg [4:0] bitcounter;
+reg sendtx;
+wire [7:0] data;
+assign data=8'b10101010;
+
+
+
+always @(posedge clock)
+begin 
+
+if (reset) begin
+counter<=0;
+bitcounter<=0;
+tx<=1;
+end 
+else if (send==1) begin
+sendtx<=1;
+end
+else begin
+
+  counter<=counter+1;
+  if(counter>=5208&&sendtx==1) begin
+  counter<=0;
+		if(bitcounter==0) begin
+		tx<=0;
+		bitcounter<=bitcounter+1;
+		end
+		else if (bitcounter!=0&&bitcounter<9)begin
+		tx<=data[bitcounter-1];
+		bitcounter<=bitcounter+1;
+		end 
+		else if(bitcounter==9) begin
+		tx<=1;
+		bitcounter<=0;
+		sendtx<=0;
+		end
+	end
+end
+end
+endmodule
+		
+		
