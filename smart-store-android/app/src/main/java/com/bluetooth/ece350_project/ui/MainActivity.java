@@ -1,5 +1,6 @@
 package com.bluetooth.ece350_project.ui;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothManager;
@@ -10,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.RequiresApi;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,6 +19,9 @@ import android.widget.EditText;
 import com.bluetooth.ece350_project.R;
 import com.bluetooth.ece350_project.data.Constants;
 
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static android.support.v4.content.PermissionChecker.PERMISSION_GRANTED;
 import static com.bluetooth.ece350_project.util.CommonUtil.REQUEST_ENABLE_BT;
 
 /**
@@ -148,8 +153,9 @@ public class MainActivity extends AppCompatActivity {
         alert.show();
     }
 
+
     public void switchToList() {
-        Intent i = new Intent(MainActivity.this, ListSensorActivity.class);
+        Intent i = new Intent(MainActivity.this, DeviceListActivity.class);
         startActivity(i);
     }
 }

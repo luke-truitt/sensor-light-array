@@ -39,25 +39,10 @@
         android:layout_marginStart="608dp"
         android:layout_marginTop="172dp"
         android:background="#3d5c7e"
-        android:text="Unknown Name"
+        android:text="Sensor Hub"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/is_connected"
-        android:layout_width="137dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="340dp"
-        android:layout_marginTop="160dp"
-        android:background="#3d5c7e"
-        android:text="Not Connected"
-        android:textAlignment="center"
-        android:textColor="#ffffff"
-        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -120,16 +105,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/x-axis_selector"
-        android:layout_width="192dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="48dp"
-        android:background="#3d5c7e"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/collected_data_text" />
-
     <!--<Button-->
     <!--android:id="@+id/pair_btn"-->
     <!--android:layout_width="230dp"-->
@@ -142,54 +117,129 @@
     <!--app:layout_constraintEnd_toEndOf="parent"-->
     <!--app:layout_constraintTop_toTopOf="parent" />-->
 
+    <TextView
+        android:id="@+id/collected_wait"
+        android:layout_width="155dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="704dp"
+        android:background="#3d5c7e"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/collected_ir"
+        android:layout_width="155dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="704dp"
+        android:background="#3d5c7e"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.784"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/collected_temp"
+        android:layout_width="155dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="948dp"
+        android:background="#3d5c7e"
+        android:text="67.5"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.784"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/collected_motion"
+        android:layout_width="155dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="948dp"
+        android:background="#3d5c7e"
+        android:text="No"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ListView
         android:id="@+id/other_info"
-        android:layout_width="776dp"
-        android:layout_height="716dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="748dp"
+        android:layout_height="214dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:background="#3d5c7e"
-        android:textColor="@color/white"
         android:dividerHeight="1dp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/freq_text" />
 
     <Button
         android:id="@+id/clear_data"
-        android:layout_width="375dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="112dp"
+        android:layout_width="228dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="108dp"
         android:background="#3d5c7e"
+        android:text="Send Off"
         android:textColor="@color/white"
-        android:text="Clear collected data"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/share_btn"
-        android:layout_width="366dp"
-        android:layout_height="47dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="112dp"
+        android:id="@+id/reset_sensor"
+        android:layout_width="234dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginBottom="108dp"
         android:background="#3d5c7e"
+        android:text="Send On"
         android:textColor="@color/white"
-        android:text="EXPORT COLLECTED DATA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/reset_sensor"
+        android:id="@+id/export_btn"
+        android:layout_width="158dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="108dp"
+        android:background="#3d5c7e"
+        android:text="Export Data"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/share_btn"
         android:layout_width="584dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="116dp"
         android:layout_marginBottom="44dp"
         android:background="#3d5c7e"
         android:textColor="@color/white"
-        android:text="FACTORY RESET"
+        android:text="Connect Sensor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -223,38 +273,81 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
         android:layout_marginStart="116dp"
         android:layout_marginTop="348dp"
         android:background="#3d5c7e"
         android:text="Timestamp"
+        android:textAlignment="center"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/freq_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="93dp"
+        android:layout_height="22dp"
         android:layout_marginTop="348dp"
-        android:layout_marginEnd="184dp"
+        android:layout_marginEnd="172dp"
         android:background="#3d5c7e"
         android:text="Reading"
+        android:textAlignment="center"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="164dp"
-        app:layout_constraintBottom_toBottomOf="@+id/x-axis_selector"
-        app:layout_constraintStart_toStartOf="@+id/x-axis_selector"
-        app:layout_constraintTop_toTopOf="@+id/x-axis_selector"
-        app:layout_constraintVertical_bias="0.526"
-        app:srcCompat="@drawable/ic_down" />
+    <TextView
+        android:id="@+id/freq_text2"
+        android:layout_width="181dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="676dp"
+        android:layout_marginEnd="500dp"
+        android:background="#3d5c7e"
+        android:text="Number of People Waiting"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/freq_text3"
+        android:layout_width="195dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="676dp"
+        android:layout_marginEnd="124dp"
+        android:background="#3d5c7e"
+        android:text="Number of People Walking In"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/freq_text4"
+        android:layout_width="93dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="924dp"
+        android:layout_marginEnd="536dp"
+        android:background="#3d5c7e"
+        android:text="Is Motion?"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/freq_text5"
+        android:layout_width="99dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="924dp"
+        android:layout_marginEnd="172dp"
+        android:background="#3d5c7e"
+        android:text="Temperature"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/ic_settings"

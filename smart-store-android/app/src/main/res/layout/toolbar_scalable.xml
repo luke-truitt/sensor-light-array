@@ -8,7 +8,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/aml_banner2"
+        android:src="@drawable/sensor_banner"
         android:contentDescription="TODO" />
 
 </android.support.v7.widget.Toolbar>
